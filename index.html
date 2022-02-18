@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./sass/main.css" />
+    <title>BABY CARE</title>
+  </head>
+  <body>
+    <div class="navBar"></div>
+
+    <!-- <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    
+
+    <div class="myTabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="tabs">
+                        <div class="tab-header">
+                            <div>Home</div>
+                            <div>Dashboard</div>
+                            <div>About</div>
+                            <div>Contact</div>
+                        </div>
+
+                        <div class="tab-indicator"></div>
+                        <div class="tab-body">
+
+                            <div class="active">
+                                <h1>Home</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+                                <p>Lorem ipsu  m dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+                            </div>
+
+                            <div>
+                                <h1>Dashboard</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+                            </div>
+
+                            <div>
+                                <h1>About</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+                            </div>
+
+                            <div>
+                                <h1>Contact</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Swiper JS -->
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+       var swiper = new Swiper(".mySwiper", {
+         effect: "cards",
+         grabCursor: true,
+       });
+     </script>
+
+
+
+     <script>
+
+         let tabs = document.querySelector('.tabs')
+         let tabHeader = tabs.querySelector('.tab-header')
+         let tabBody = tabs.querySelector('.tab-body')
+         let tabIndicator = tabs.querySelector('.tab-indicator')
+         let tabHeaderNodes = tabs.querySelectorAll('.tab-header > div')
+         let tabBodyNodes = tabs.querySelectorAll('.tab-body > div')
+
+        for(let i = 0; i < tabHeaderNodes.length; i++) {
+            tabHeaderNodes[i].addEventListener('click', function() {
+                tabHeader.querySelector('.active').classList.remove('active')
+                tabHeaderNodes[i].classList.add('active')
+                tabBody.querySelector('.active').classList.remove('active')
+                tabBodyNodes[i].classList.add('active')
+                tabIndicator.style.left = `calc(calc(calc(25% - 5px) * ${i} + 10px))`
+            })
+        }
+         
+     </script>
+
+  </body>
+</html>
