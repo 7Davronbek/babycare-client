@@ -1,122 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./sass/main.css" />
-    <title>BABY CARE</title>
-  </head>
-  <body>
-    <div class="navBar"></div>
 
-    <!-- <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="swiper mySwiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
-                      </div>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Baby Care & Spa</title>
+</head>
+
+<body>
+
+    <div class="myWrap">
+        <div class="myNav">
+            <div class="container">
+                <div class="row">
+                    <nav class="Navbar d-flex justify-content-between align-items-center">
+                        <div class="col-lg-2 col-5">
+                            <div class="logo"><a href=""><img class="w-100" src="img/logo.png"
+                                        alt="baby care and spa"></a></div>
+                        </div>
+
+                        <div onclick="burgering()" class="burger">
+                            <div class="burger1"></div>
+                            <div class="burger2"></div>
+                            <div class="burger3"></div>
+                        </div>
+
+                        <div class="col-lg-7  ml-auto">
+                            <ul class="navbar-menu d-flex justify-content-between align-items-center">
+                                <li><a onclick="burgering()" href="#about" class="navbar-link">О нас</a></li>
+                                <li><a onclick="burgering()" href="#blog" class="navbar-link">Блог</a></li>
+                                <li><a onclick="burgering()" href="#services" class="navbar-link">Услуги</a></li>
+                                <li><a onclick="burgering()" href="#contacts" class="navbar-link">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
-    </div> -->
-    
-    
+        <header>
+            <div class="header">
+                <div class="headerCloud1">
+                    <img style="width: 40%;" src="img/cloud2.png" alt="baby care and spa">
+                </div>
+                <div class="headerCloud2">
+                    <img style="width: 25%;" src="img/cloud3.png" alt="baby care and spa">
+                </div>
+                <div class="headerCloud3">
+                    <img style="width: 30%;" src="img/cloud3.png" alt="baby care and spa">
+                </div>
+                <div class="headerCloud4">
+                    <img style="width: 20%;" src="img/cloud2.png" alt="baby care and spa">
+                </div>
 
-    <div class="myTabs">
-        <div class="container">
-            <div class="row">
-                <div class="col-8">
-                    <div class="tabs">
-                        <div class="tab-header">
-                            <div>Home</div>
-                            <div>Dashboard</div>
-                            <div>About</div>
-                            <div>Contact</div>
+                <div class="header-content position-relative">
+                    <div class="container">
+                        <div
+                            class="row text-center text-lg-start text-md-start justify-content-between flex-column-reverse flex-lg-row ">
+                            <div class="col-lg-7 col-12">
+                                <div class="header-info">
+                                    <h1>уход за детьми и спа</h1>
+                                    <p>Индивидуально подобранный массаж для гармоничного развития ребенка. Без стресса и
+                                        слез, в приятной обстановке с игрушками и музыкой.</p>
+                                    <a href="#" class="btn">Подробно</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-10 position-relative">
+                                <div class="img1">
+                                    <img class="w-100 layer" data-speed="5" src="img/header1.png"
+                                        alt="baby care and spa">
+                                </div>
+                                <div class="img">
+                                    <img class="w-100 layer" data-speed="-5" src="img/header2.png"
+                                        alt="baby care and spa">
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="tab-indicator"></div>
-                        <div class="tab-body">
 
-                            <div class="active">
-                                <h1>Home</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
-                                <p>Lorem ipsu  m dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+
+
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section id="about">
+                <div class="aboutUs">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="about-info">
+                                    <h2>о нас</h2>
+                                    <p>Уход за детьми и спа.
+                                    <ol>
+                                        <li> 1) Spa Процедуры</li>
+                                        <li> 2) BARBER KIDS</li>
+                                        <li> 3) Массаж с 2 мес. до 13 лет</li>
+                                        <li>4) Гидромассаж с 2 мес. до 13 лет</li>
+                                        <li>5) Парафинотерапия</li>
+                                    </ol>
+
+
+                                    </p>
+                                    <a href="#" class="btn">Подробно</a>
+                                </div>
                             </div>
-
-                            <div>
-                                <h1>Dashboard</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+                            <div class="col-lg-5 col-md-5 position-relative">
+                                <div class="img position-absolute">
+                                    <div data-speed="2" class="layer">
+                                        <img class="w-100 " src="img/about.png" alt="baby care and spa">
+                                    </div>
+                                </div>
+                                <div class="cloud1 layer" data-speed="15"><img src="img/cloud1.png"
+                                        alt="baby care and spa"></div>
+                                <div class="cloud2 layer" data-speed="-5"><img src="img/cloud1.png"
+                                        alt="baby care and spa"></div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="blog">
+                <div class="blog">
+                    <div id="tabs" class="myTabs" style="padding-top: 130px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-12 mx-auto">
+                                    <div class="tabs">
+                                        <div class="tab-header justify-content-end">
+                                            <div class="active">Spa Процедуры</div>
+                                            <div>Массаж </div>
+                                            <div>BARBER KIDS</div>
+                                            <div>Гидромассаж </div>
+                                            <div>Парафинотерапия</div>
+                                        </div>
 
-                            <div>
-                                <h1>About</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+                                        <div class="tab-indicator"></div>
+                                        <div class="tab-body">
+                                            <div class="active">
+                                                <i>
+                                                    <h3>Spa Процедуры</h3>
+                                                    <p>
+                                                        Spa-процедуры для детей очень популярны сегодня за рубежом.
+                                                        Регулярный уход за собой, по мнению сторонников идеи детского
+                                                        spa, необходим не только взрослым.
+                                                        <br>
+                                                        Такая тенденция не может не радовать spa-салоны, которые с
+                                                        удовольствием разрабатывают и предлагают самые разнообразные
+                                                        спа-программы со специальными косметологическими процедурами и
+                                                        массажем для маленьких посетителей.
+                                                    </p>
+                                                </i>
+                                                <i>
+                                                    <img src="img/tab1.jpg" alt="baby care and spa">
+                                                </i>
+                                            </div>
+                                            <div>
+                                                <i>
+                                                    <h3>Массаж</h3>
+                                                    <p>
+                                                        Индивидуально подобранный массаж для гармоничного развития
+                                                        ребенка. Без стресса и слез, в приятной обстановке с игрушками и
+                                                        музыкой.
+                                                    </p>
+                                                    <ul>
+                                                        <li>⭐️Для лечения патологий и трав</li>
+                                                    </ul>
+
+                                                    <li> ⭐️Для профилактики</li>
+
+                                                    <li> ⭐️Способствует своевременному овладению всеми необходимыми
+                                                        навыками (перевороты, ходьба, ползание и др.)</li>
+                                                    <p>
+                                                        Для повышения защитных функций организма Вашего малыша
+                                                        Соответствие показателям нормы (рост, вес и т.д)
+
+                                                        Для детей От 0 до 13 лет
+                                                    </p>
+                                                </i>
+                                                <i>
+                                                    <img src="img/tab2.jpg" alt="baby care and spa">
+                                                </i>
+                                            </div>
+                                            <div>
+                                                <i>
+                                                    <h3>Barber Kids</h3>
+                                                    <p>
+                                                        Студия детского стиля.
+                                                        Первый детский Barber Kids в Узбекистане.
+                                                    </p>
+                                                    <p>
+                                                    </p>
+                                                    <p>
+                                                        Детские стрижки и укладки от 0 до 15 лет
+                                                    </p>
+                                                </i>
+                                                <i>
+                                                    <img src="img/tab3.jpg" alt="baby care and spa">
+                                                </i>
+                                            </div>
+
+                                            <div>
+
+                                                <i>
+                                                    <h3>Гидромассаж</h3>
+                                                    <p>
+                                                        Гидротерапия (массаж водой) в индивидуальной ванночке-джакузи
+                                                        без хлора и химии, в комфортной для Вашего малыша температуре.
+                                                        Высокие стандарты безопасности и чистоты. После процедур
+                                                    </p>
+                                                    <ul>
+                                                        <li>⭐️Развиваются сердце и легкие</li>
+
+                                                        <li> ⭐️Укрепляется иммунитет и повышается сопротивляемость
+                                                            инфекционным заболеваниям</li>
+                                                        <li>⭐️Снижается гипертонус мышц
+                                                            Укрепляются суставы</li>
+                                                    </ul>
+                                                </i>
+                                                <i>
+                                                    <img src="img/tab4.jpg" alt="baby care and spa">
+                                                </i>
+                                            </div>
+                                            <div>
+
+                                                <i>
+                                                    <h3>Парафинотерапия</h3>
+                                                    <p>
+                                                        У детей возрастом до года парафин обычно используется в качестве
+                                                        расслабляющей процедуры для лечения спастических парезов. У
+                                                        маленьких пациентов возрастом старше одного года процедура
+                                                        применяется при заболеваниях дыхательных путей (трахеитах,
+                                                        бронхитах) на стадии выздоровления, парафин прикладывается по
+                                                        аналогии с горчичниками; при болезнях мочевого пузыря – на
+                                                        область низа живота, при дискинезии желчных путей – на правое
+                                                        подреберье. </p>
+                                                    <!-- <ul>
+                                                        <li> 🤍Кроме этого, парафинолечение применяется при последствиях
+                                                            болезней и травм костно-мышечной системы;
+                                                            гастроэнтерологических
+                                                            заболеваниях (гастриты, язвы, холестициты, гепатиты);
+                                                            заболеваниях кожи (нейродермит, чешуйчатый лишай, рубцовые
+                                                            изменения кожи и дерматозы); недугах периферической нервной
+                                                            системы; ранах, ожогах и отморожениях.</li>
+
+                                                        <li> 🤍Парафинотерапия является наиболее действенной при
+                                                            подострых
+                                                            процессах, а также на начальной стадии хронического
+                                                            протекания
+                                                            недугов, пока не произошли необратимые анатомические
+                                                            изменения
+                                                            пораженных тканей (органов).</li>
+                                                    </ul> -->
+
+                                                </i>
+                                                <i>
+                                                    <img src="img/tab5.jpg" alt="baby care and spa">
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <div>
-                                <h1>Contact</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti quibusdam maiores debitis magnam, pariatur quos corporis quam cumque impedit aliquid iste inventore, eligendi recusandae! Sed illum minus quasi? Minus!</p>
+            </section>
+            <div class="fixed-baby"></div>
+            <div class="offer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="img">
+                                <img class="w-100" src="img/offer1.png" alt="baby care and spa">
                             </div>
-
+                        </div>
+                        <div class="col-3">
+                            <div class="img">
+                                <img class="w-100" src="img/offer2.png" alt="baby care and spa">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="img">
+                                <img class="w-100" src="img/offer3.png" alt="baby care and spa">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="img">
+                                <img class="w-100" src="img/offer4.png" alt="baby care and spa">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <section id="services">
+                <div class="services">
+                    <div class="container">
+                        <div class="row justify-content-end flex-column-reverse flex-lg-row">
+                            <div class="col-lg-2 position-relative">
+                                <div class="img position-absolute">
+                                    <img src="img/service.png" alt="baby care and spa">
+                                </div>
+                            </div>
+                            <div class="col-lg-9 ml-auto">
+                                <div class="info">
+                                    <h2>Услуги</h2>
+                                    <ul>
+                                        <li>Гидромассаж с 2-х месяцев до 6-ти лет</li>
+                                        <li>Массаж с 2-х месяцев до 13-ти лет</li>
+                                        <li>Лечебный массаж</li>
+                                        <li> Коррекционный массаж</li>
+                                        <li> Профилактический массаж</li>
+                                        <li> Spa купание в косметических средствах люкс качества</li>
+                                        <li> Уход за кожей</li>
+                                        <li> Парафинотерапия</li>
+                                    </ul>
+
+                                    <h4>Помогаем сердечку расти здоровым</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacts">
+                <div class="contacts position-relative">
+                    <div class="container">
+                        <div class="row">
+                            <div style="z-index: 1;" class="col-12 socials">
+                                <div class="row">
+                                <div class="col-lg-3 col-6" style="z-index: 11;">
+                                    <div class="insta">
+                                        <a target="_blank" href="https://www.instagram.com/baby_care_and_spa_/"> <i
+                                                class="fa-brands fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-6" style="z-index: 11;">
+                                    <div class="facebook">
+                                        <a target="_blank" href="https://www.facebook.com/BabyCare-Spa-112440563917184"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-6" style="z-index: 11;">
+                                    <div class="telegram">
+                                        <a target="_blank" href="https://t.me/Baby_care_and_spa"><i
+                                                class="fa-solid fa-paper-plane"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-6" style="z-index: 11;">
+                                    <div class="phone">
+                                        <a target="_blank" href="tel:+998908878880"><i
+                                                class="fa-solid fa-phone"></i></a>
+                                    </div>
+                                </div>
+                                <div class="blur"></div>
+                            </div>
+                            </div>
+                            <h2 style="z-index: 1;">Контакты</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
 
-     <!-- Swiper JS -->
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-     <!-- Initialize Swiper -->
-     <script>
-       var swiper = new Swiper(".mySwiper", {
-         effect: "cards",
-         grabCursor: true,
-       });
-     </script>
-
-
-
-     <script>
-
-         let tabs = document.querySelector('.tabs')
-         let tabHeader = tabs.querySelector('.tab-header')
-         let tabBody = tabs.querySelector('.tab-body')
-         let tabIndicator = tabs.querySelector('.tab-indicator')
-         let tabHeaderNodes = tabs.querySelectorAll('.tab-header > div')
-         let tabBodyNodes = tabs.querySelectorAll('.tab-body > div')
-
-        for(let i = 0; i < tabHeaderNodes.length; i++) {
-            tabHeaderNodes[i].addEventListener('click', function() {
-                tabHeader.querySelector('.active').classList.remove('active')
-                tabHeaderNodes[i].classList.add('active')
-                tabBody.querySelector('.active').classList.remove('active')
-                tabBodyNodes[i].classList.add('active')
-                tabIndicator.style.left = `calc(calc(calc(25% - 5px) * ${i} + 10px))`
-            })
-        }
-         
-     </script>
-
-  </body>
 </html>
